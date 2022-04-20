@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/script.js" defer></script>
+    <title>charts</title>
+</head>
+<body>
+    <main class="dashboard">
+        <section class="section--first">
+            <article class="card card--eerste">
+                <span id="hours">00</span>
+                <span>:</span>
+                <span id="minutes">00</span>
+            </article>
+            <article class="card card--tweede">
+                    <canvas id="myChart1"></canvas>               
+            </article>
+            <article class="card card--derde">
+                <canvas id="myChart3"></canvas>     
+            </article>
+            <article class="card  card--stopwatch">
+                <div class="timer" id="">
+                    <span class="minutes" id="js--minutes">0</span>
+                    :
+                    <span class="seconds" id="js--seconds">00</span>
+                    ,
+                    <span class="miliseconds" id="js--miliseconds">00</span>
+                </div> 
+                <section class="buttonWraper">
+                    <button  class="button button--start" id="js--start">Start</button>
+                    <button class="button button--stop"  id="js--stop">Stop</button>
+                    <button class="button button--reset"  id="js--reset">Reset</button>
+                </section>
+            </article>
+        </section>
+        <section class="section--second">
+         
+                <canvas id="myChart2"></canvas>             
+          
+        </section>
+    </main>
+</body>
+</html>

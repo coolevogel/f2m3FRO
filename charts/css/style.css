@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    padding: 4rem;
+    background: #eee;
+    font-size: 2rem;
+    font-family: sans-serif;
+}
+
+.dashboard{
+    width: 100%;
+    height: 85vh;
+    
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(12,1fr);
+}
+.section--first{
+    grid-column: 1/6;
+    grid-row: span 13; 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 4rem;
+    padding-top: 0;
+    padding-bottom: 2rem;
+}
+.section--second{
+    grid-column: 6/13;
+    grid-row: span 13;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+}
+
+.section--second canvas{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+canvas{
+    height: 100%;
+    width: 100%;
+}
+
+.card{
+    background: #eee;
+    width: 48%;
+    height: 50%;
+    box-shadow: 0 1rem 1rem 0 rgba(0,0,0,0.2);
+    border-radius: 0.5rem;
+    
+}
+
+.card--eerste{
+    font-size: 300%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+.card--tweede{
+    
+}
+
+.card--stopwatch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.timer{
+    
+    font-size: 150%;
+    margin-bottom:2rem ;
+}
+
+.seconds, .minutes{
+    
+    font-size: 150%;
+}
+
+.miliseconds{
+    font-size: 80%;
+    padding-left: 0.2rem;
+}
+
+.button{
+    padding: 1rem 1.5rem;
+    font-size: 2rem;
+    border: 0;
+    color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0.3rem 0.45rem #7a7a7a8e;
+}
+
+.button:hover{
+    cursor: pointer;
+    transform: translate(0.2rem, 0.2rem);
+    box-shadow: none;
+ 
+}
+
+.button--start{
+    background-color: #50a56e;
+
+}
+
+.button--stop{
+    background: #E83A14;
+    
+
+}
+
+.button--reset{
+    background: blue;
+}
+
+.section--second{
+    grid-column: 6/13;
+    grid-row: span 13;
+    background: #eee;
+    box-shadow: 0 1rem 1rem 0 rgba(0,0,0,0.2); 
+    border-radius: 0.5rem;
+}
+
+
+@media screen and (max-width:87.5rem) {
+    .dashboard{
+        grid-template-rows: repeat(12,20rem);
+        height: auto;
+        gap: 2rem;
+    }
+    .section--first{
+        grid-column: 1/-1;
+        grid-row: 1/7;
+        padding: 0;
+        padding-bottom:2rem ;
+        padding-right: 0;
+    }
+    .section--second{
+        grid-column: 1/-1;
+        grid-row: 7/13;
+    }
+}

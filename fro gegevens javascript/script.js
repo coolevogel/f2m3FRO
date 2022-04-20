@@ -1,0 +1,3 @@
+let gegevens = {
+    "naam": "Matthijs"
+};
